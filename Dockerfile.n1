@@ -1,6 +1,6 @@
 FROM node:24-alpine AS build 
 WORKDIR /app
-ADD . /app
+COPY . /app
 RUN npm install && \ npm run build 
 
 FROM nginx:alpine AS runtime
